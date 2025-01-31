@@ -1,0 +1,67 @@
+{
+  "name": "pytest-bdd-go-to-step",
+  "displayName": "Pytest-BDD-go-to-step",
+  "description": "enables tools to find the py code related to a step",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.96.0"
+  },
+  "categories": [
+    "Other"
+  ],
+
+  "activationEvents": [
+    "onCommand:pytest-bdd-go-to-step.helloWorld",
+    "onCommand:pytest-bdd-go-to-step.navigateToCode"
+],
+
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "pytest-bdd-go-to-step.helloWorld",
+        "title": "Hello World"
+      },
+      {
+        "command": "pytest-bdd-go-to-step.navigateToCode",
+        "title": "My Ext: Navigate to Code"
+    }
+    ],
+    "menus": {
+      "editor/context": [
+          {
+              "command": "pytest-bdd-go-to-step.navigateToCode",
+              "when": "editorTextFocus",
+              "group": "navigation"
+          }
+      ]
+  }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "npm run compile && npm run lint",
+    "lint": "eslint src",
+    "test": "vscode-test"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.96.0",
+    "@types/mocha": "^10.0.10",
+    "@types/node": "20.x",
+    "@typescript-eslint/eslint-plugin": "^8.17.0",
+    "@typescript-eslint/parser": "^8.17.0",
+    "eslint": "^9.16.0",
+    "typescript": "^5.7.2",
+    "@vscode/test-cli": "^0.0.10",
+    "@vscode/test-electron": "^2.4.1",
+    "glob": "^7.1.6",
+    "mocha": "^8.2.1"
+
+
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/DevPS-513/sample-vs-code-extension"
+}
+}
