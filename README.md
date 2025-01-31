@@ -9,7 +9,7 @@ vsix package
 then search how to install vsix package for VS code
 
 ## Description
-A simple VSCode extension that provides a "Hello World" command and a "Navigate to Code" command.
+A simple VSCode extension that provides a "Hello World" command and a "Navigate to Code" command on right click  that will print a message from a called python script
 
 ## Features
 - **Hello World Command**: Displays a "Hello World!" message.
